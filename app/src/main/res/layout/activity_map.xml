@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity">
+
+    <fragment
+        android:id="@+id/m_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/v_pager_container"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="80dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@+id/Lay_gps_btn"
+            android:id="@+id/Btn_map_scope"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:background="@drawable/border_rounded_circle"
+            android:text="500m"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_margin="6dp"
+            android:id="@+id/Lay_gps_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/border_rounded">
+
+            <Button
+                android:id="@+id/Btn_my_location"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_gps_fixed_black_48dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/Lay_map_scope"
+        android:background="#90000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:id="@+id/Lay_map_seekbar"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 위치에서 검색 반경 선택"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/Tx_map_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500m"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="10dp"/>
+
+            <SeekBar
+                android:id="@+id/Sb_map_distance"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:progress="250"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/Btn_search_center"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/border_rounded_circle"
+        android:text="이 위치에서 검색하기"
+        android:textSize="20dp"/>
+
+</RelativeLayout>

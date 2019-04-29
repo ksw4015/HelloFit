@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "103883544365",
+    "firebase_url": "https://crypto-iris-184205.firebaseio.com",
+    "project_id": "crypto-iris-184205",
+    "storage_bucket": "crypto-iris-184205.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103883544365:android:9f0fe6e911f1f730",
+        "android_client_info": {
+          "package_name": "com.example.zealo.tapandfragment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103883544365-hl8bo6b39n62ojqihmahpfc4590olpsm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zealo.tapandfragment",
+            "certificate_hash": "d039de37856a5ea0d886ae97da085ffabd1d393a"
+          }
+        },
+        {
+          "client_id": "103883544365-27j1ha6me5ifco05qtt97pir4aln2usl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_mIedZhrEqUAGyRMsRjJHbzYcLN99UHs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103883544365-27j1ha6me5ifco05qtt97pir4aln2usl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

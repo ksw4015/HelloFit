@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Tx_recieve_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017-10-31"
+        android:textSize="8dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/Iv_friend_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/Iv_friend_profile"
+            android:id="@+id/Tx_frined_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="김석우"/>
+
+        <TextView
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/Iv_friend_profile"
+            android:layout_below="@+id/Tx_frined_nick"
+            android:id="@+id/Tx_friend_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PUBG"
+            android:textSize="12dp"/>
+
+        <Button
+            android:padding="0dp"
+            android:gravity="center"
+            android:id="@+id/Btn_add_friend"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="추가"
+            android:textSize="10dp"
+            android:background="@drawable/selector_border_rounded"/>
+
+    </RelativeLayout>
+</RelativeLayout>

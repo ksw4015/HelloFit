@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/Lay_info_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Iv_info_gym_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/Btn_info_like"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_star_border_white_24dp"/>
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/Tx_info_favorite_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="357"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/Tx_info_favorite_num"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_favorite_white_24dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignBottom="@+id/Iv_info_gym_img"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Tx_info_gym_rate"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(평균별점)"
+                android:textSize="14dp"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TabHost
+        android:layout_below="@+id/Lay_info_top"
+        android:layout_above="@+id/Lay_info_bottom"
+        android:id="@+id/m_tabhost_gym_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:id="@+id/content_info_gym"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <HorizontalScrollView
+                        android:id="@+id/scroll_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/Iv_info_gym_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_marginLeft="2dp"
+                                android:id="@+id/Iv_info_gym_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_marginLeft="2dp"
+                                android:id="@+id/Iv_info_gym_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_marginLeft="2dp"
+                                android:id="@+id/Iv_info_gym_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_marginLeft="2dp"
+                                android:id="@+id/Iv_info_gym_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/Lay_img_6_container"
+                                android:layout_marginLeft="2dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/Iv_info_gym_6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.5" />
+                                <TextView
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="전체보기"
+                                    android:textColor="#FFFFFF"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <RelativeLayout
+                        android:id="@+id/Lay_gym_address"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_below="@+id/scroll_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/Tx_info_gym_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경기도 수원시 영통구 영통동"
+                            android:textSize="16dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_below="@+id/Tx_info_gym_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="편의정보"
+                            android:textSize="16dp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_below="@+id/Lay_gym_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/Tx_gym_fix_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="영업시간"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:id="@+id/Tx_gym_time"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="06:00 ~ 24:00"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:id="@+id/Tx_gym_fix_holiday"
+                            android:layout_marginTop="2dp"
+                            android:layout_below="@+id/Tx_gym_fix_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="휴무일"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:id="@+id/Tx_gym_holiday"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/Tx_gym_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="매 셋째 주 일요일"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_below="@+id/Tx_gym_fix_holiday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="전화번호"
+                            android:textSize="13dp"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:id="@+id/Tx_gym_phone"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/Tx_gym_holiday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="010-3370-6205"
+                            android:textSize="13dp"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:id="@+id/content_info_gym_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/gym_client_List"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <LinearLayout
+        android:id="@+id/Lay_info_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/Btn_info_call"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:background="@drawable/border_oval"
+                android:layout_width="36dp"
+                android:layout_height="36dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_local_phone_black_24dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Btn_info_map"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:background="@drawable/border_oval"
+                android:layout_width="36dp"
+                android:layout_height="36dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_location_on_black_24dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Btn_info_favorite"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:background="@drawable/border_oval"
+                android:layout_width="36dp"
+                android:layout_height="36dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/ic_star_black_24dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

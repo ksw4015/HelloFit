@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TapAndFragment</string>
+    <string name="Google_Play_ID">user_ad_id</string>
+    <string name="user_email">user_email</string>
+    <string name="NaN">NaN</string>
+
+    <string name="profile_fragment">profile_fragment</string>
+    <string name="profile_activity">profile_activity</string>
+    <string name="profile_revise">profile_revise</string>
+    <string name="picture_activity">picture_activity</string>
+    <string name="info_activity">info_activity</string>
+    <string name="gallery_activity">gallery_activity</string>
+
+    <string name="list_type">list_type</string>
+    <string name="friend">friend</string>
+    <string name="gym">gym</string>
+
+    <string name="class_name">class_name</string>
+</resources>

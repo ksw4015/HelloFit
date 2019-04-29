@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Iv_favorite_gym_profile"
+            android:layout_margin="14dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp" />
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/Iv_favorite_gym_profile"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/Tx_favorite_gym_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스포인"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="3dp"/>
+
+            <RatingBar
+                android:layout_above="@+id/Tx_favorite_gym_name"
+                android:id="@+id/Rb_favorite_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:isIndicator="true" />
+
+            <ImageView
+                android:id="@+id/Iv_favorite"
+                android:layout_below="@+id/Tx_favorite_gym_name"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ic_favorite_black_24dp"/>
+
+            <TextView
+                android:id="@+id/Tx_favorite_num"
+                android:layout_marginLeft="3dp"
+                android:layout_below="@+id/Tx_favorite_gym_name"
+                android:layout_toRightOf="@+id/Iv_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="357"
+                android:textSize="10dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/Btn_favorite_del"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="삭제"
+            android:textSize="10dp"
+            android:layout_marginRight="12dp"
+            android:padding="0dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/selector_border_rounded"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

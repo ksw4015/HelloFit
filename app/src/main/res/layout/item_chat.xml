@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/Lay_Date"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <View
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="#000000"/>
+
+        <TextView
+            android:id="@+id/Tv_Date"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-12-05"
+            android:textSize="14dp"/>
+
+        <View
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="#000000"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/Lay_Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="3dp"
+            android:id="@+id/Iv_Profile"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/Tv_Nick"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/Iv_Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="혁진이"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/Tv_Chat"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/Tv_Nick"
+            android:layout_toRightOf="@+id/Iv_Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나인패치 굿"
+            android:textSize="13dp"
+            android:background="@drawable/inbox2"/>
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_alignBottom="@+id/Tv_Chat"
+            android:layout_toRightOf="@+id/Tv_Chat"
+            android:id="@+id/Tv_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오후 4:30"
+            android:textSize="10dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

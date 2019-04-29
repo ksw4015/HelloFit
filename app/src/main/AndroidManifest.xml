@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zealo.tapandfragment">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- FCM Cloud Messaging Service -->
+        <service
+            android:name=".FCMMessage.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".FCMMessage.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_markunread_white_36dp" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCmKo4e0Xt-YLHELNPFygdUb5cMv_Ll6YM"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoAppTheme">
+
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/NoAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MapActivity"
+            android:theme="@style/NoAppTheme">
+        </activity>
+
+        <activity android:name=".InfoActivity">
+
+        </activity>
+
+        <activity android:name=".PictureActivity">
+
+        </activity>
+
+        <activity android:name=".ListActivity">
+
+        </activity>
+
+        <activity android:name=".GalleryActivity">
+
+        </activity>
+
+        <activity android:name=".ShareActivity">
+
+        </activity>
+
+        <activity android:name=".ProfileReviseActivity">
+
+        </activity>
+
+        <activity android:name=".ProfileActivity">
+
+        </activity>
+
+        <activity android:name=".ChattingActivity">
+
+        </activity>
+    </application>
+
+</manifest>

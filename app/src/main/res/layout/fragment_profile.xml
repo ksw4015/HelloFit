@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/Lay_profile_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="내 프로필"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Lay_profile_area"
+        android:layout_below="@+id/Lay_profile_bar"
+        android:layout_width="match_parent"
+        android:layout_height="112dp">
+
+        <ImageView
+            android:id="@+id/Iv_my_avatar"
+            android:layout_margin="12dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/Iv_my_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/Lay_profile_num"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/Tx_profile_write_num"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="24dp"/>
+                <TextView
+                    android:id="@+id/Tx_profile_gym_num"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="24dp"/>
+                <TextView
+                    android:id="@+id/Tx_profile_friend_num"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="24dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Lay_profile_fixed_area"
+                android:layout_below="@+id/Lay_profile_num"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="게시물"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="즐겨찾는 센터"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="친구"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/Lay_profile_fixed_area"
+                android:id="@+id/Btn_profile_revise"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="160dp"
+                android:layout_height="28dp"
+                android:text="프로필 수정"
+                android:textSize="12dp"
+                android:background="@drawable/selector_border_rounded"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/Lay_profile_nick_area"
+        android:paddingLeft="14dp"
+        android:layout_below="@+id/Lay_profile_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Tx_profile_my_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="김석우다"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/Tx_profile_my_name"
+            android:id="@+id/Tx_profile_my_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋은데 취직하고 싶다!"
+            android:textSize="12dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/Lay_btn_upload"
+            android:layout_marginRight="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/border_rounded">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_photo_camera_black_36dp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:layout_below="@+id/Lay_profile_nick_area"
+        android:id="@+id/profile_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:verticalSpacing="2dp"
+        android:horizontalSpacing="3dp"
+        >
+
+    </GridView>
+
+</RelativeLayout>
