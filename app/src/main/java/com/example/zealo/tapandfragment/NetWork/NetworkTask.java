@@ -42,7 +42,7 @@ public class NetworkTask {   // SingleTone
         return INSTANCE;
     }
 
-    public static final String BASE_URL = "http://218.155.154.110:8080/";
+    public static final String BASE_URL = "MY_WEB_SERVER_URL";
     private static final String LOGIN_GOOGLE = BASE_URL + "hellofit/php/login_google.php";
     private static final String SELECT_MAIN = BASE_URL + "hellofit/php/select_all_gyms.php";
     private static final String SELECT_MAP = BASE_URL + "hellofit/php/select_all_gym_map.php";
